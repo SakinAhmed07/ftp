@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA SERVER BY SAKIN AHMED</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+
+    <div class="main-wrapper">
+        <header>
+            <div class="header-text">
+                <h1>আপনার স্পিড ও এন্টারটেইনমেন্ট</h1>
+                <p>সেরা FTP সার্ভার এবং লাইভ টিভি উপভোগ করুন</p>
+            </div>
+            <div class="ookla-container modern-meter">
+                <div class="ookla-gauge">
+                    <div class="gauge-glow"></div>
+                    <svg class="gauge-svg" viewBox="0 0 200 200">
+            <circle class="bg-track" cx="100" cy="100" r="90"></circle>
+            <circle class="meter-progress modern-stroke" id="progress" cx="100" cy="100" r="90"></circle>
+        </svg>
+                    <defs>
+                        <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00fad9" />
+                            <stop offset="100%" stop-color="#4facfe" />
+                        </linearGradient>
+                    </defs>
+
+
+
+                    <div class="gauge-content">
+                        <div class="speed-info">
+                            <small class="label">DOWNLOAD</small>
+                            <span id="speed-value">0.0</span>
+                            <span class="mbps-text">Mbps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-row modern-stats">
+                    <div class="stat">
+                        <i class="fas fa-arrow-down" style="color:#00fad9"></i>
+                        <span id="stat-down">0</span> <small>Mbps</small>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-arrow-up" style="color:#a855f7"></i>
+                        <span id="stat-up">0</span> <small>Mbps</small>
+                    </div>
+                </div>
+
+                <button class="ookla-btn modern-btn" id="startBtn" onclick="startOoklaTest()">
+        <span class="btn-text">GO</span>
+        <div class="btn-ring"></div>
+    </button>
+
+                <p class="speed-instruction">আপনার ইন্টারনেট স্পিড টেস্ট করুন</p>
+            </div>
+
+        </header>
+
+        <div class="content-container">
+            <section class="card ftp-section">
+                <h2><i class="fas fa-folder-open"></i> FTP SERVERS</h2>
+                <div class="list-container">
+                    <a href="#" class="item">
+                        <i class="fas fa-server cyan"></i>
+                        <span>SUPER-SPEED FTP 1</span>
+                        <span class="btn-sm">ব্রাউজ</span>
+                    </a>
+                    <a href="#" class="item">
+                        <i class="fas fa-hdd orange"></i>
+                        <span>GLOBAL BD FTP 2</span>
+                        <span class="btn-sm">ব্রাউজ</span>
+                    </a>
+                    <a href="#" class="item">
+                        <i class="fas fa-database purple"></i>
+                        <span>CIRCLE NET FTP 3</span>
+                        <span class="btn-sm">ব্রাউজ</span>
+                    </a>
+                </div>
+            </section>
+            <section class="card movie-section">
+                <h2><i class="fas fa-film"></i> ONLINE MOVIE STREAM</h2>
+                <div class="movie-grid">
+                    <a href="https://moviebox.ph/" class="movie-card">
+                        <div class="movie-poster">
+                            <i class="fas fa-play"></i>
+                            <img src="moviebox.png" alt="Movie 1">
+                        </div>
+                        <span>MOVIE BOX</span>
+                    </a>
+                    <a href="https://www.justwatch.com/in/movie/the-story-of-o" class="movie-card">
+                        <div class="movie-poster">
+                            <i class="fas fa-play"></i>
+                            <img src="JustWatch.webp" alt="Movie 2">
+                        </div>
+                        <span>JUST WATCH</span>
+                    </a>
+                    <a href="https://skistarmovies.com/movies/" class="movie-card">
+                        <div class="movie-poster">
+                            <i class="fas fa-play"></i>
+                            <img src="123.png" alt="Movie 3">
+                        </div>
+                        <span>123 MOVIES</span>
+                    </a>
+                    <a href="https://www.bilibili.tv/en/" class="movie-card">
+                        <div class="movie-poster">
+                            <i class="fas fa-play"></i>
+                            <img src="bilibili.png" alt="Movie 4">
+                        </div>
+                        <span>BILIBILI</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="card tv-section">
+                <h2><i class="fas fa-play-circle"></i> LIVE TV</h2>
+                <div class="tv-grid">
+                    <a href="https://www.jagobd.com" class="tv-card">
+                        <div class="tv-icon"><img src="jagobd.jpg" alt="JAGOBD"></div>
+                        <span>JAGOBD</span>
+                    </a>
+                    <a href="https://toffeelive.com" class="tv-card">
+                        <div class="tv-icon"><img src="toffee.jpg" alt="TOFFEE"></div>
+                        <span>TOFFEE</span>
+                    </a>
+                    <a href="https://www.bioscopelive.com" class="tv-card">
+                        <div class="tv-icon"><img src="bio.png" alt="BIOSCOPE"></div>
+                        <span>BIOSCOPE</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=tbkWU88p5ks" class="tv-card">
+                        <div class="tv-icon"><img src="ntv.png" alt="NTV LIVE"></div>
+                        <span>NTV LIVE</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=zLXWGyW-3LY" class="tv-card">
+                        <div class="tv-icon"><img src="jamuna.jpg" alt="JAMUNA TV LIVE"></div>
+                        <span>JAMUNA TV LIVE</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=Tmd0TGNM3U8" class="tv-card">
+                        <div class="tv-icon"><img src="somoy.png" alt="SOMOY TV LIVE"></div>
+                        <span>SOMOY TV LIVE</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=_UdWf3_N8Ak" class="tv-card">
+                        <div class="tv-icon"><img src="c24.png" alt="C24 TV LIVE"></div>
+                        <span>CHANNEL24 TV LIVE</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=xmAM20V-8og" class="tv-card">
+                        <div class="tv-icon"><img src="ekattor.png" alt="ekattor.TV LIVE"></div>
+                        <span>ekattor.TV LIVE</span>
+                    </a>
+                    <a href="http://10.200.13.14/" class="tv-card">
+                        <div class="tv-icon"><img src="red.png" alt="RED FORCE TV SERVER"></div>
+                        <span>RED FORCE TV SERVER</span>
+                    </a>
+                    <a href="https://bdixtv.serverbd247.com/" class="tv-card">
+                        <div class="tv-icon"><img src="bdixtv.png" alt="BDIX TV SERVER"></div>
+                        <span>BDIX TV SERVER</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <section class="dev-profile-card">
+            <div class="card-bg-effect"></div>
+
+            <div class="dev-info">
+                <div class="img-wrapper">
+                    <img src="sakin.jpg" alt="Developer Photo" class="dev-img">
+                </div>
+
+                <div class="dev-details">
+                    <h3 class="gradient-text">SAKIN AHMED</h3>
+                    <p class="phone-text"><i class="fas fa-phone-alt"></i> +880 1410 500722</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/sakin.ahmed2k14" target="_blank" class="fb-btn">
+                            <i class="fab fa-facebook"></i> Facebook আইডি
+                            <span class="btn-glow-bar"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 SAKIN AHMED All Rights Reserved</p>
+
+                <span class="footer-tagline">পছন্দের কন্টেন্ট এখন আপনার হাতের মুঠোয়।</span>
+
+                <div class="footer-legal">
+                    <span>Powered by GOSHAIRHAT FASTEST INTERNET</span>
+                </div>
+            </div>
+        </footer>

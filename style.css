@@ -1,0 +1,1053 @@
+/* গুগল ফন্ট এবং বেসিক সেটআপ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Bengali', sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #060d21, #1e1b4b);
+    background-size: 400% 300%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.header-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.ookla-container {
+    flex: 0 0 320px;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* টেক্সট বামে এবং মিটার ডানে থাকবে */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+
+/* Floating Orbs */
+
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: #00fad9;
+    top: -100px;
+    right: -100px;
+}
+
+.orb-2 {
+    width: 300px;
+    height: 300px;
+    background: #4facfe;
+    bottom: -50px;
+    left: -50px;
+}
+
+
+/* Main Container */
+
+.main-wrapper {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #00fad9, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Ookla Meter */
+
+.ookla-container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    border-radius: 30px;
+    text-align: center;
+    width: 260px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ookla-gauge {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.gauge-svg {
+    transform: rotate(135deg);
+    width: 100%;
+    height: 100%;
+}
+
+circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+circle.bg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+circle.meter-progress {
+    stroke: #00fad9;
+    stroke-dasharray: 565;
+    stroke-dashoffset: 565;
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+.gauge-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#speed-value {
+    font-size: 2.5rem;
+    display: block;
+    font-weight: bold;
+}
+
+.mbps-text {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+.stat i {
+    color: #00fad9;
+}
+
+.ookla-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #00fad9;
+    background: transparent;
+    color: #00fad9;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ookla-btn:hover {
+    background: #00fad9;
+    color: #000;
+    box-shadow: 0 0 20px #00fad9;
+}
+
+
+/* Content Cards */
+
+.content-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 320px;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    border-left: 4px solid #00fad9;
+    padding-left: 15px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #00fad9;
+    transform: translateX(5px);
+}
+
+.item i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.btn-sm {
+    margin-left: auto;
+    font-size: 0.8rem;
+    background: #334155;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+
+/* TV Grid */
+
+.tv-grid {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    gap: 15px;
+}
+
+.tv-card {
+    background: rgba(211, 29, 29, 0.486);
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.tv-card:hover {
+    border-color: #4facfe;
+    background: rgba(79, 172, 254, 0.1);
+    transform: scale(1.05);
+}
+
+.tv-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4facfe;
+}
+
+.cyan {
+    color: #00fad9;
+}
+
+.orange {
+    color: #ff9800;
+}
+
+.purple {
+    color: #a855f7;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.tv-card img {
+    width: 100%;
+    /* কার্ডের সমান চওড়া হবে */
+    height: auto;
+    /* অনুপাত ঠিক রাখবে */
+    max-height: 80px;
+    /* লোগো খুব বেশি বড় হওয়া আটকাবে */
+    object-fit: contain;
+    /* ইমেজ কেটে যাবে না, সুন্দরভাবে ফিট হবে */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tv-card {
+    overflow: hidden;
+    /* কন্টেইনারের বাইরের অংশ কেটে ফেলবে */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* আপনার আগের অন্য কোডগুলো এখানে থাকবে */
+}
+
+.tv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* দুই কলামে ভাগ করবে */
+    gap: 15px;
+    /* কার্ডগুলোর মাঝে ফাঁকা জায়গা রাখবে */
+    padding: 10px;
+}
+
+
+/* মুভি সেকশনের গ্রিড লেআউট */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* ২ কলাম */
+    gap: 15px;
+}
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.movie-card:hover {
+    border-color: #ff9800;
+    /* মুভি সেকশনের জন্য আলাদা থিম কালার */
+    background: rgba(255, 152, 0, 0.1);
+}
+
+.movie-poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    aspect-ratio: 2/3;
+    /* মুভি পোস্টারের স্ট্যান্ডার্ড সাইজ */
+    background: #000;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.movie-poster i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.movie-card:hover .movie-poster img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.movie-card:hover .movie-poster i {
+    opacity: 1;
+}
+
+
+/* ৩টি সেকশন পাশাপাশি রাখার জন্য কন্টেইনার আপডেট */
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* ছোট স্ক্রিনে নিচে নিচে যাবে */
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    /* কার্ডের মিনিমাম সাইজ */
+}
+
+
+/* মেইন কন্টেইনারকে পুরো স্ক্রিন জুড়ে করার জন্য */
+
+.main-wrapper {
+    width: 98%;
+    /* দুই পাশে সামান্য একটু গ্যাপ রেখে পুরোটা নেবে */
+    max-width: 100%;
+    /* কোনো সর্বোচ্চ সীমা থাকবে না */
+    margin: 20px auto;
+    /* উপরে-নিচে সামান্য গ্যাপ */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    /* কোনাগুলো সামান্য গোল */
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* কন্টেন্ট কন্টেইনারকে ফ্লেক্স গ্রো করার জন্য */
+
+.content-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* স্ক্রিন ছোট হলে নিচে নেমে যাবে */
+    width: 100%;
+}
+
+
+/* প্রতিটা সেকশন (FTP, Movie, TV) যাতে সমান জায়গা নেয় */
+
+.card {
+    flex: 1;
+    /* তিনটি কার্ড সমানভাবে জায়গা দখল করবে */
+    min-width: 350px;
+    /* পিসিতে ৩টি পাশাপাশি থাকবে, মোবাইলে নিচে নামবে */
+    background: rgba(15, 23, 42, 0.6);
+    padding: 25px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* ডেভেলপার প্রোফাইল কার্ড স্টাইল */
+
+.dev-profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+    /* কার্ডটি বেশি বড় হবে না */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dev-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dev-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* ছবি গোল হবে */
+    object-fit: cover;
+    border: 3px solid #00fad9;
+    /* নিওন বর্ডার */
+    box-shadow: 0 0 15px rgba(0, 250, 217, 0.3);
+}
+
+.dev-details h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.dev-details p {
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.fb-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1877F2;
+    /* ফেসবুকের নিজস্ব নীল রং */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.fb-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+}
+
+
+/* মোবাইল ভিউর জন্য ছোট করা */
+
+@media (max-width: 600px) {
+    .dev-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* মেইন ফুটার স্টাইল */
+
+.main-footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px 20px;
+    background: rgba(15, 23, 42, 0.4);
+    /* হালকা ডার্ক ব্যাকগ্রাউন্ড */
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    /* ওপরের কোনাগুলো গোল */
+}
+
+.footer-content p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.footer-tagline {
+    display: block;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    /* হালকা গ্রে রং */
+    margin-bottom: 15px;
+}
+
+.footer-legal {
+    font-size: 0.8rem;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+    display: inline-block;
+}
+
+
+/* হোভার ইফেক্ট */
+
+.main-footer:hover {
+    background: rgba(15, 23, 42, 0.6);
+    transition: 0.3s ease;
+}
+
+
+/* মেইন প্রোফাইল কার্ড স্টাইল (সম্পূর্ণ আপডেট) */
+
+.dev-profile-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    /* আরও হালকা গ্লাস ইফেক্ট */
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 50px auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 550px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    /* ব্যাকগ্রাউন্ড ইফেক্ট যাতে বাইরে না যায় */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* মাউস নিলে হালকা থ্রিডি ইফেক্ট */
+
+.dev-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0, 250, 217, 0.1);
+    /* হালকা সায়ান গ্লো */
+}
+
+
+/* ছবির চারপাশের উজ্জ্বল রিং */
+
+.img-wrapper {
+    position: relative;
+    padding: 5px;
+    /* ছবি থেকে বর্ডারের গ্যাপ */
+    border-radius: 50%;
+    /* উজ্জ্বল সায়ান গ্লোয়িং বর্ডার */
+    background: linear-gradient(135deg, #00fad9, #4facfe);
+    box-shadow: 0 0 20px rgba(0, 250, 217, 0.4);
+}
+
+.dev-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0f172a;
+    /* ব্যাকগ্রাউন্ডের সাথে মেলানো বর্ডার */
+    transition: transform 0.3s ease;
+}
+
+
+/* ছবির ওপর মাউস নিলে হালকা জুম */
+
+.img-wrapper:hover .dev-img {
+    transform: scale(1.05);
+}
+
+
+/* নামটিকে গ্রেডিয়েন্ট কালার দিয়ে হাইলাইট */
+
+.gradient-text {
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #00fad9, #4facfe, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.phone-text {
+    color: #94a3b8;
+    /* হালকা গ্রে রং */
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.phone-text i {
+    color: #00fad9;
+    margin-right: 5px;
+}
+
+
+/* Facebook বাটন স্টাইল (সম্পূর্ণ আপডেট) */
+
+.fb-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 2px solid #1877F2;
+    color: #1877F2;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+/* বাটনের ভেতর মাউস নিলে কালার হবে */
+
+.fb-btn:hover {
+    background: #1877F2;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+}
+
+
+/* বাটন এনিমেশন লেয়ার */
+
+.btn-glow-bar {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: -10px;
+    transition: left 0.5s ease;
+}
+
+.fb-btn:hover .btn-glow-bar {
+    left: 110%;
+    /* বাটন জুড়ে লাইট যাবে */
+}
+
+.speed-instruction {
+    margin-top: 20px;
+    /* বাটন থেকে কিছুটা নিচে নামাবে */
+    font-size: 1rem;
+    /* লেখার সাইজ */
+    color: #00fad9;
+    /* মিটারের থিমের সাথে মিলিয়ে সায়ান কালার */
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    /* হালকা স্বচ্ছতা যাতে বেশি কড়া না লাগে */
+    text-shadow: 0 0 10px rgba(0, 250, 217, 0.3);
+    /* হালকা গ্লো ইফেক্ট */
+    animation: pulse 2s infinite;
+    /* লেখাটি হালকা দপদপ করবে যাতে ইউজারের নজরে পড়ে */
+}
+
+
+/* লেখার জন্য একটি সুন্দর এনিমেশন */
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.ookla-container {
+    height: auto;
+    /* ফিক্সড হাইট থাকলে সেটি সরিয়ে অটো করে দেবে */
+    min-height: 400px;
+    /* কন্টেইনারটি প্রয়োজন অনুযায়ী লম্বা হবে */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    /* নিচের দিকে কিছুটা জায়গা রাখবে */
+}
+
+.speed-instruction {
+    margin-top: 15px;
+    background: none !important;
+    /* যদি কোনো বক্স ব্যাকগ্রাউন্ড থাকে তা মুছে দেবে */
+    border: none !important;
+    /* বর্ডার থাকলে মুছে দেবে */
+    color: #00fad9;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    line-height: 1.4;
+}
+
+
+/* মডার্ন কন্টেইনার */
+
+.modern-meter {
+    background: rgba(10, 15, 30, 0.7) !important;
+    border: 1px solid rgba(0, 250, 217, 0.2) !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 250, 217, 0.05);
+}
+
+.gauge-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 250, 217, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+
+/* ট্র্যাক ডিজাইন - ডটেড বা ড্যাশড */
+
+circle.bg-track {
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-dasharray: 2, 4;
+    /* ছোট ছোট ডট তৈরি করবে */
+}
+
+circle.modern-stroke {
+    stroke: url(#speedGradient);
+    /* গ্রেডিয়েন্ট স্ট্রোক (নিচে SVG এড করতে হবে) */
+    stroke-width: 12;
+    filter: drop-shadow(0 0 12px rgba(0, 250, 217, 0.6));
+}
+
+
+/* স্পিড ভ্যালু এনিমেশন */
+
+#speed-value {
+    font-family: 'Orbitron', sans-serif;
+    /* আধুনিক ডিজিটাল ফন্ট */
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #fff, #00fad9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.label {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: #4facfe;
+    display: block;
+    margin-bottom: -5px;
+}
+
+
+/* আধুনিক বাটন */
+
+.modern-btn {
+    border: none !important;
+    background: #0f172a !important;
+    position: relative;
+    z-index: 1;
+    color: #00fad9 !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn-ring {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid #00fad9;
+    border-radius: 50%;
+    animation: ringPulse 2s infinite;
+}
+
+@keyframes ringPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+
+/* মডার্ন স্পিড মিটার স্টাইল */
+
+.modern-meter {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 25px;
+    text-align: center;
+    width: 320px;
+}
+
+.ookla-gauge {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+}
+
+.gauge-svg {
+    transform: rotate(135deg);
+    /* ৩/৪ সার্কেল করার জন্য */
+}
+
+circle {
+    fill: none;
+    stroke-width: 12;
+    stroke-linecap: round;
+}
+
+.bg-track {
+    stroke: rgba(255, 255, 255, 0.05);
+}
+
+.modern-stroke {
+    stroke: url(#speedGradient);
+    stroke-dasharray: 424;
+    /* ৩/৪ সার্কেলের পরিধি */
+    stroke-dashoffset: 424;
+    transition: stroke-dashoffset 0.1s linear;
+    filter: drop-shadow(0 0 8px #00fad9);
+}
+
+.gauge-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#speed-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+}
+
+.label {
+    font-size: 0.6rem;
+    color: #4facfe;
+    letter-spacing: 2px;
+}
+
+.mbps-text {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+
+/* বাটন ডিজাইন */
+
+.modern-btn {
+    position: relative;
+    background: #0f172a !important;
+    border: 2px solid #00fad9 !important;
+    color: #00fad9 !important;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.btn-ring {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #00fad9;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.testing .btn-ring {
+    animation: pulse 1.5s infinite;
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.speed-instruction {
+    margin-top: 15px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+
+/* ১. বাটন ক্লিক নিশ্চিত করতে এই ফিক্সটি যোগ করুন */
+
+.ookla-btn.modern-btn {
+    position: relative !important;
+    z-index: 999 !important;
+    /* বাটনকে সবার উপরে রাখবে */
+    pointer-events: auto !important;
+    /* ক্লিক ইভেন্ট সচল করবে */
+    cursor: pointer !important;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+/* ২. টেক্সট ওভারল্যাপ ফিক্স */
+
+.gauge-content {
+    pointer-events: none;
+    /* যাতে মাঝখানের টেক্সট বাটনের ক্লিকে বাধা না দেয় */
+    z-index: 5;
+}
+
+
+/* ৩. মিটার সাইজ এবং এলাইনমেন্ট ফিক্স */
+
+.ookla-container.modern-meter {
+    height: auto !important;
+    min-height: 450px;
+    /* কন্টেইনার একটু বড় করা হলো যাতে সব আটে */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ৪. এনিমেশন ও পালস ফিক্স (আগের ডুপ্লিকেট অ্যানিমেশনগুলো একীভূত করা হলো) */
+
+@keyframes ringPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.testing .btn-ring {
+    animation: ringPulse 1.5s infinite !important;
+    opacity: 1 !important;
+}
+
+
+/* ৫. ছবির বর্ডার ও শ্যাডো ফিক্স */
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
