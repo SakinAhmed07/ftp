@@ -152,7 +152,7 @@ circle.bg {
 }
 
 circle.meter-progress {
-    stroke: #00fad9;
+    stroke: #fa0000;
     stroke-dasharray: 565;
     stroke-dashoffset: 565;
     transition: stroke-dashoffset 0.1s linear;
@@ -173,7 +173,7 @@ circle.meter-progress {
 
 .mbps-text {
     font-size: 0.8rem;
-    color: #94a3b8;
+    color: #07469e;
 }
 
 .stats-row {
@@ -1050,4 +1050,48 @@ circle {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#startBtn {
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+.gauge {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+#progress {
+    fill: none;
+    stroke: rgb(0, 217, 255);
+    stroke-dasharray: 424 565;
+    stroke-dashoffset: 424;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.gauge-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+#speed-value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.ookla-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 9999;
+    pointer-events: auto;
 }
