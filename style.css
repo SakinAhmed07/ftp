@@ -97,6 +97,7 @@ header {
     backdrop-filter: blur(20px);
     border-radius: 40px;
     padding: 40px;
+    text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -110,7 +111,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     background: linear-gradient(to right, #00fad9, #4facfe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1074,7 +1075,7 @@ circle {
 }
 
 .gauge-content {
-    position: absolute;
+    position: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1094,4 +1095,61 @@ circle {
     cursor: pointer;
     z-index: 9999;
     pointer-events: auto;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    /* বাইরের অংশ লুকিয়ে রাখবে */
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    /* ৪টি ইমেজ থাকলে ৪০০%, ৫টি থাকলে ৫০০% */
+    animation: slide-animation 12s infinite;
+    /* ১২ সেকেন্ড পর পর লুপ হবে */
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+
+/* স্লাইড হওয়ার কি-ফ্রেম */
+
+@keyframes slide-animation {
+    0% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    45% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    95% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
